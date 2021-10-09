@@ -1,0 +1,32 @@
+*O que é POO?
+	A programação orientada a objetos (POO) é um paradigma de desenvolvimento de software.
+	A POO busca abstrair regras de negócio, casos e uso e entidades do mundo real em forma de código chamadas de objetos/classes. 
+	A programação orientada a objetos pode ser definida por quatro pilares principais, sendo eles herança, encapsulamento, abstração e polimorfismo.
+
+*O que é polimorfismo?
+	Poli significa muitos e morfo significa formas, então temos a possibilidade de um objeto assumir diversas formas diferentes na orientação a objetos, 
+	podendo uma classe sobrescrever o comportando de suas classes, o polimorfismo ocorre quando um objeto tem um comportamento diferente para uma mesma ação.
+
+*O que é abstração?
+	A abstração é utilizada para a definição de entidades do mundo real. Sendo onde são criadas as classes. 
+	Essas entidades são consideradas tudo que é real, tendo como consideração as suas características e ações
+
+*O que é encapsulamento?
+	O encapsulamento permite que uma classe controle a visibilidade de suas propriedades e a forma como elas serão acessadas ou alteradas não expondo detalhes internos para o usuário, 
+	tornando partes do sistema mais independentes possível.
+	 
+*Quando usar uma classe abstrata e quando devo usar uma interface?
+	Quando criamos uma Interface, nós estamos basicamente criando um set de métodos sem qualquer implementação que deve ser herdado por outras classes já implementadas.
+	Quando nos criamos uma Classe Abstrata, nós estamos criando uma classe base que pode ter um ou mais métodos completos, servindo de classes base ou que contenham algum 
+	comportamento padrão.
+
+*O que faz as interfaces IDisposable, IComparable, ICloneable e IEnumerable?
+   IDisposable: É utilizada para implementar classes em que os recursos não são gerenciados pelo framework. Ela obriga a implementação do método Dispose();
+   IComparable: É utilizada para tornar o objeto comparável com outros, definindo ordem de grandeza. Métodos de ordenação, em geral, pedem objetos que implementem
+		IComparable. Ela pede a implementação do método CompareTo
+   ICloneable: É utilizado para implementar a cópia de valores em novas instâncias de um objeto. Ela pede a implementação do método Clone;
+   IEnumerable: É utilizado para tornar possível a iteração em objetos agregadores, expondo o seu enumerador.
+
+*Existe herança múltipla (de classes) em C#?
+	A linguagem C# não suporta herança múltipla de classes.
+	Para superar esse problema, podemos usar interfaces onde uma classe pode implementar mais de uma interface.
