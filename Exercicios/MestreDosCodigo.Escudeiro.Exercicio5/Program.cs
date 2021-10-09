@@ -1,4 +1,5 @@
-﻿using MestreDosCodigo.Escudeiro.Domain.Helpers;
+﻿using MestreDosCodigo.Escudeiro.Domain.Entities;
+using MestreDosCodigo.Escudeiro.Domain.Helpers;
 using System;
 
 namespace MestreDosCodigo.Escudeiro.Exercicio5
@@ -11,13 +12,15 @@ namespace MestreDosCodigo.Escudeiro.Exercicio5
             int elementoB = ValidarValorDigitado("B");
             int elementoC = ValidarValorDigitado("C");
 
-            var valorDelta = Math.Pow(elementoB, 2) - 4 * elementoA * elementoC;
-            var resultado1 = ((elementoB * -1) + Math.Sqrt(valorDelta)) / (2 * elementoA);
-            var resultado2 = ((elementoB * -1) - Math.Sqrt(valorDelta)) / (2 * elementoA);
+            var bhaskara = new FormulaBhaskara(elementoA, elementoB, elementoC);
+
+            //var valorDelta = Math.Pow(elementoB, 2) - 4 * elementoA * elementoC;
+            //var resultado1 = ((elementoB * -1) + Math.Sqrt(valorDelta)) / (2 * elementoA);
+            //var resultado2 = ((elementoB * -1) - Math.Sqrt(valorDelta)) / (2 * elementoA);
 
             Console.WriteLine("");
-            Console.WriteLine($"R1: {resultado1}");
-            Console.WriteLine($"R2: {resultado2}");
+            Console.WriteLine($"R1: {bhaskara.CalcularPrimeiroResultado()}");
+            Console.WriteLine($"R2: {bhaskara.CalcularSegundoResultado()}");
         }
 
 
