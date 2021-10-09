@@ -14,7 +14,7 @@ namespace MestreDosCodigo.Escudeiro.Domain.Entities
         {
             if (valor < 0)
             {
-                throw new Exception("Não é permitido depositar um valor negativo!");
+                throw new ArgumentOutOfRangeException("Não é permitido depositar um valor negativo!");
             }
             Saldo += valor - TaxaDeOperacao;
         }
@@ -23,7 +23,7 @@ namespace MestreDosCodigo.Escudeiro.Domain.Entities
         {
             if (Saldo - valor < 0)
             {
-                throw new Exception("Você não possui saldo!");
+                throw new ArgumentOutOfRangeException("Você não possui saldo!");
             }
 
             Saldo -= (valor + TaxaDeOperacao);
